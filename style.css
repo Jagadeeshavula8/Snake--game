@@ -1,0 +1,49 @@
+ @media screen and (max-width: 500px) {
+  .controls button {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    padding: 10px;
+  }
+}
+ body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: #d1e0f0;
+  color: rgb(37, 35, 35);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+canvas {
+  display: block;
+  margin: 0 auto;
+  border: 15px solid #1b1f1b;
+  max-width: 100%;
+  height: auto;
+}
+h1 {
+    color: #4caf50;
+}
+
+.controls {
+    margin-top: 20px;
+}
+
+.controls button {
+    background-color: #3a98eb;
+    
+    color: white;
+    font-size: 59px;
+      
+    padding: 85px;
+    margin: 70px;
+    border: none;
+    border-radius: 50px;
+    width: 90px;
+    height: 90px;
+}
+
+.controls button:active {
+    background-color: #ef7046;
+}

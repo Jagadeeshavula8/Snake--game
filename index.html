@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Snake Game PWA</title>
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#4caf50">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <center>
+    <h2>Score: <span id="score">0</span></h2>
+  </center>
+  
+  <canvas id="game" width="400" height="400"></canvas>
+
+  <script src="game.js"></script>
+  <script>
+    // Register service worker
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js')
+        .then(() => console.log("✅ Service Worker Registered"))
+        .catch(err => console.log("❌ Service Worker error:", err));
+    }
+  </script>
+  <br>
+  <br>
+  <br>
+   <br>
+  <br>
+  <br>
+   <br>
+  <br>
+  <br>
+  <div class="controls">
+    <center>
+      <button onclick="setDirection('UP')"><center>⬆️</center></button><br>
+      <button onclick="setDirection('LEFT')"><center>⬅️</center></button>
+      <button onclick="setDirection('DOWN')"><center>⬇️</center></button>
+      <button onclick="setDirection('RIGHT')"><center>➡️</center></button>
+    </center>
+  </div>
+  
+  <audio id="bg-music" src="bg-music.mp3" loop></audio>
+  <audio id="eat-sound" src="eat.mp3"></audio>
+  <audio id="gameover-sound" src="gameover.mp3"></audio>
+</body>
+
+</html>
